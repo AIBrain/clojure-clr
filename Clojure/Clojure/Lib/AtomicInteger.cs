@@ -23,16 +23,10 @@ namespace clojure.lang
     /// <remarks>I hope.  Someone with more knowledge of these things should check this out.</remarks>
     public sealed class AtomicInteger
     {
-        #region Data
-
         /// <summary>
         /// The current <see cref="Int32">integer</see> value.
         /// </summary>
         int _val;
-
-        #endregion
-
-        #region C-tors
 
         /// <summary>
         /// Initializes an <see cref="AtomicInteger">AtomicInteger</see> with value zero.
@@ -50,10 +44,6 @@ namespace clojure.lang
         {
             _val = initVal;
         }
-
-        #endregion
-
-        #region Value access
 
         /// <summary>
         /// Gets the current value.
@@ -127,7 +117,5 @@ namespace clojure.lang
         {
             return Interlocked.Exchange(ref _val,newVal);
         }
-
-        #endregion
     }
 }
